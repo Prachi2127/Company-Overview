@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Company Overview</title>
+  <style>
+    :root {
+      --primary: #0b5fc7;
+      --radius: 12px;
+      --muted-text: #526a86;
+      --text: #08325a;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .card {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid rgba(11,95,199,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      overflow: hidden;
+    }
+
+    .vikram {
+      background: linear-gradient(180deg, #b1d3ee 0%, #ffffff 100%);
+      box-shadow: 0 12px 40px rgba(37, 78, 114, 0); 
+    }
+
+    .consulting {
+      background: linear-gradient(180deg, #e9fff5 0%, #ffffff 100%);
+      box-shadow: 0 8px 25px rgba(15,30,60,0.06);
+    }
+
+    .logistics {
+      background: linear-gradient(180deg, #eaf1ff 0%, #ffffff 100%);
+      box-shadow: 0 8px 25px rgba(15,30,60,0.06);
+    }
+
+    
+    .consulting:hover,
+    .logistics:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,30,60,0.1);
+    }
+
+    
+    .logo-wrap {
+      flex: 0 0 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 10px;
+    }
+
+    .logo-wrap img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .card-body {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .vikram .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+
+    .desc {
+      margin: 8px 0 12px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #234060;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(11,95,199,0.14);
+      background: #fff;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: rgba(11,95,199,0.08);
+    }
+
+    
+    .meta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .chip {
+      background: #f0f4fa;
+      border: 1px solid rgba(11,95,199,0.05);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #345;
+    }
+
+    
+    h2.section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+      margin: 10px 0 0;
+    }
+
+    @media (max-width: 720px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo-wrap {
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Main Company -->
+    <article class="card vikram">
+      <div class="logo-wrap">
+        <img src="vikrama.png" alt="Vikram Aviation Logo" />
+      </div>
+      <div class="card-body">
+        <h2 class="title">Vikram Aviation Pvt Ltd</h2>
+        <p class="desc">
+          We deliver high-quality overhaul, bench check, and calibration services for aviation instruments, serving both national and international airlines, NSOPs, and defence forces across India.
+        </p>
+        <div class="actions">
+          <a href="https://www.vikramaviation.com" target="_blank" class="btn">Visit Website ↗</a>
+        </div>
+        <div class="meta-row">
+          <span class="chip">Aviation Experts</span>
+          <span class="chip">Quality Certified</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Group Companies -->
+    <h2 class="section-title">Group Companies</h2>
+
+    <!-- Demorgia Consulting -->
+    <article class="card consulting">
+      <div class="logo-wrap">
+        <img src="demorgia.png" alt="Demorgia Consulting Logo" />
+      </div>
+      <div class="card-body">
+        <h3 class="title">Demorgia Consulting Services Pvt Ltd</h3>
+        <p class="desc">
+          A leading skill assessment and manpower consulting firm, recognized nationally and trusted by government bodies and organizations across India. It provides technology-driven assessment platforms and secure online proctoring solutions.
+        </p>
+        <div class="actions">
+          <a href="https://www.demorgia.com" target="_blank" class="btn">Visit Website ↗</a>
+        </div>
+        <div class="meta-row">
+          <span class="chip">Government Trusted</span>
+          <span class="chip">Technology Driven</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Demorgia Logistics -->
+    <article class="card logistics">
+      <div class="logo-wrap">
+        <img src="demorgiasv.png" alt="Demorgia Logistics Logo" />
+      </div>
+      <div class="card-body">
+        <h3 class="title">Demorgia Logistics Pvt Ltd</h3>
+        <p class="desc">
+          A Government-approved Customs House Agent (CHA) and global freight forwarder providing logistics solutions like Customs Clearing, Warehousing, and Bond Section services for exporters, importers, and traders across India.
+        </p>
+        <div class="actions">
+          <a href="https://www.demorgialogistics.com" target="_blank" class="btn">Visit Website ↗</a>
+        </div>
+        <div class="meta-row">
+          <span class="chip">CHA Approved</span>
+          <span class="chip">Global Reach</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</body>
+</html>
